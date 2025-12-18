@@ -63,6 +63,7 @@ options(
     # Otherwise we download the input from the input_url.
 
     # First we need to make sure there's a folder to save the input in.
+    dir.create(path = here::here("Data"), showWarnings = FALSE)
     dir.create(path = here::here("Data", year), showWarnings = FALSE)
 
     # Download using `httr2`.
