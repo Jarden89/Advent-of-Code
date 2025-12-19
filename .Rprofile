@@ -86,3 +86,20 @@ options(
 
   return(todays_input)
 }
+
+
+# Function to send the solution to adventofcode.com. This is shamelessly taken
+# from github.com/JeanDupin/AOC.
+.send_solution <- function(year, day, part, solution){
+  res <- httr2::request(paste0("https://adventofcode.com/", year ,"/day/", day ,"/answer")) |>
+    httr2::req_cookies_set(session = Sys.getenv("AOC_SESSION")) |>
+    httr2::req_user_agent(Sys.getenv("AOC_USER_AGENT")) |>
+    httr2::req_body_form(level = part, answer = solution) |>
+    httr2::req_perform()
+  
+  response <- httr2::resp_body_html(res) |> 
+    rvest::html_elements("article") |> 
+    rvest::html_text2()
+  
+  return(response)
+}
