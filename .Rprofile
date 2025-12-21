@@ -1,4 +1,4 @@
-# Styler Options ----
+# 1. Styler Options ----
 
 # Silence styler messages about the cache being cleared in x number of days
 # when opening the project.
@@ -8,7 +8,7 @@ options(styler.cache_root = "styler")
 
 
 
-# Custom Styler ----
+# 2. Custom Styler ----
 
 # Based on the tidyverse styler with a few tweaks.
 .custom_styler <- styler::tidyverse_style()
@@ -24,7 +24,7 @@ options(
 
 
 
-# Advent of Code Functions ----
+# 3. Advent of Code Functions ----
 
 # Function to load the input data for the day from the local directory. If the
 # data does not exist locally the function will attempt to download it. This
@@ -88,18 +88,19 @@ options(
 }
 
 
-# Function to send the solution to adventofcode.com. This is shamelessly taken
-# from github.com/JeanDupin/AOC.
-.send_solution <- function(year, day, part, solution){
-  res <- httr2::request(paste0("https://adventofcode.com/", year ,"/day/", day ,"/answer")) |>
+# Function to send the solution to adventofcode.com. This is copied from
+# github.com/JeanDupin/AOC.
+send_solution <- function(solution, year, day, part) {
+
+  res <- httr2::request(paste0("https://adventofcode.com/", year, "/day/", day, "/answer")) |>
     httr2::req_cookies_set(session = Sys.getenv("AOC_SESSION")) |>
     httr2::req_user_agent(Sys.getenv("AOC_USER_AGENT")) |>
     httr2::req_body_form(level = part, answer = solution) |>
     httr2::req_perform()
-  
-  response <- httr2::resp_body_html(res) |> 
-    rvest::html_elements("article") |> 
+
+  aoc_response <- httr2::resp_body_html(res) |>
+    rvest::html_elements("article") |>
     rvest::html_text2()
-  
-  return(response)
+
+  return(aoc_response)
 }
