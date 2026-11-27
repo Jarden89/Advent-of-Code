@@ -6,6 +6,8 @@ Scratchpad.R
 # Data and output folders are typically not tracked.
 data/
 Data/
+input/
+Inputs/
 
 # Output folders
 # output/
