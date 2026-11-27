@@ -17,12 +17,6 @@
 
 ---
 
-This is a test.
-
----
-
-This is another test.
-
 ### Setup
 
 You need to use `usethis::edit_r_environ()` and set an `AdventOfCode_SESSION_COOKIE` and an `AdventOfCode_USER_AGENT`.
