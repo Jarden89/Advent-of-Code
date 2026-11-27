@@ -1,3 +1,9 @@
+# 0. renv ----
+source("renv/activate.R")
+
+
+
+
 # 1. Styler Options ----
 
 # Silence styler messages about the cache being cleared in x number of days when
