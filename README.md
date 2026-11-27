@@ -25,9 +25,10 @@ This is another test.
 
 ### Setup
 
-You need to use `usethis::edit_r_environ()` and set an `AOC_SESSION_COOKIE` and an `AOC_USER_AGENT`.
+You need to use `usethis::edit_r_environ()` and set an `AdventOfCode_SESSION_COOKIE` and an `AdventOfCode_USER_AGENT`.
 
 They should look something like:
 
 `AdventOfCode_SESSION_COOKIE="<some_long_string>"`
+
 `AdventOfCode_USER_AGENT="<link_to_github_project> by <your_email>"`
