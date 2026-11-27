@@ -1,4 +1,4 @@
-Advent of Code Solutions
+<h1 align="center"> Advent Of Code Solutions </h1>
 
 ----
 
