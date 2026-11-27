@@ -13,7 +13,7 @@
 ![2023](https://img.shields.io/badge/2023%20%E2%AD%90%EF%B8%8F-0%2F50-red)
 ![2024](https://img.shields.io/badge/2024%20%E2%AD%90%EF%B8%8F-0%2F50-red)
 ![2025](https://img.shields.io/badge/2025%20%E2%AD%90%EF%B8%8F-0%2F50-red)
-![2026](https://img.shields.io/badge/2026%20%E2%AD%90%EF%B8%8F-0%2F50-red)
+![2026](https://img.shields.io/badge/2026%20%E2%AD%90%EF%B8%8F-0%2F%3F-blue)
 
 ---
 
